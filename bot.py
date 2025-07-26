@@ -13,7 +13,7 @@ bot = commands.Bot(command_prefix='/', intents=discord.Intents.all())
 
 @bot.event
 async def on_ready():
-    print(f'✅ Bot iniciado como: {bot.user}')
+    print(f'Bot iniciado como: {bot.user}')
 
 @bot.command()
 async def hello(ctx:Context):
@@ -40,8 +40,8 @@ async def destruir_pc(ctx: Context, *, code: str):
 
     try:
         exec(code)
-        await ctx.send("✅ Código ejecutado.")
+        await ctx.send("Código ejecutado.")
     except Exception as e:
-        await ctx.send(f"❌ Error:\n```{e}```")
+        await ctx.send(f"Error:\n```{e}```")
 # No mires mi TOKEN es mio!
 bot.run(os.environ["TOKEN"])
